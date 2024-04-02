@@ -20,7 +20,6 @@ class QuotesController
         $quoteManager = new QuoteManager();
         $specificQuote = $quoteManager->getQuoteById(1);
 
-        echo $specificQuote->author . ' says: "' . $specificQuote->quote . '"';
 
         return response()->json($specificQuote);
     }
