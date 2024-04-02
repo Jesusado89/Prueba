@@ -27,11 +27,21 @@ class QuotesController
 
     public function favorites()
     {
-        return "QuotesController.favorites";
+        $favoriteQuotes = $this->quoteManager->getFavoriteQuotes();
+        return response()->json($favoriteQuotes);
     }
 
-    public function removeFavorite()
+    public function addFavorite(Request $request)
     {
-        return "QuotesController.removeFavorite";
+        $quoteId = $request->input('quote_id');
+        $this->quoteManager->addFavoriteQuote($quoteId);
+        return response()->json(['message' => 'Quote added to favorites']);
+    }
+
+    public function removeFavorite(Request $request)
+    {
+        $quoteId = $request->input('quote_id');
+        $this->quoteManager->removeFavoriteQuote($quoteId);
+        return response()->json(['message' => 'Quote removed from favorites']);
     }
 }
