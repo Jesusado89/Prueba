@@ -21,3 +21,25 @@
         }
     }
 </script>
+
+<style>
+    /* Estilos personalizados */
+    .custom-card {
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px;
+    }
+
+    .custom-card-header {
+        background-color: #007bff;
+        color: #fff;
+        padding: 10px;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+    }
+
+    .custom-card-body {
+        padding: 20px;
+    }
+</style>
