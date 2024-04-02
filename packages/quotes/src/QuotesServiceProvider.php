@@ -16,6 +16,6 @@ class QuotesServiceProvider extends ServiceProvider
             'quotes-config'
         );
 
-        $this->loadRoutesFrom(__DIR__ . '/../routes/api.php');
+        $this->loadRoutesFrom(__DIR__ . '/../src/routes.php');
     }
 }
